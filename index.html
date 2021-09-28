@@ -10,7 +10,10 @@
   <body>
     <div id="vue">
      
-        <div v-if="mostrar">Este es el primer div</div>
+        <template v-if="mostrar">
+          <h3>Titulo</h3>
+          <p>Parrafo</p>
+          Este es el primer div</template>
         <div v-else>Este es el segundo div</div>
         edwef
       </div>
