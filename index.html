@@ -9,14 +9,10 @@
   </head>
   <body>
     <div id="vue">
-      <div v-if="parrafo == 1">
-        <h3>Titulo</h3>
-        <p>Parrafo</p>
-        Este es el primer div
-      </div>
-      <div v-else-if='parrafo == 2'>Este es el segundo div</div>
-      <div v-else-if='parrafo == 3'>Este es el tercer div</div>
-      <div v-else>Este es el cuarto div, salió de condicion</div>
+      
+      <ul>
+        <li v-for='(pais,index) of paises'>{{index+1}}-{{pais.nombre}}</li>
+      </ul>
     </div>
 
     <script src="vue.js"></script>

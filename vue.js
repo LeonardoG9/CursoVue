@@ -1,6 +1,12 @@
 new Vue({
   el: "#vue",
-  data:{
-    parrafo:4
-  }
+  data: {
+    paises: [
+      {
+        nombre: "Mexico",
+      },
+      { nombre: "España" },
+      { nombre: "Colombia" },
+    ],
+  },
 });
