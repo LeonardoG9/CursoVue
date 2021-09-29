@@ -9,15 +9,16 @@
   </head>
   <body>
     <div id="vue">
-     
-        <template v-if="mostrar">
-          <h3>Titulo</h3>
-          <p>Parrafo</p>
-          Este es el primer div</template>
-        <div v-else>Este es el segundo div</div>
-        
+      <div v-if="parrafo == 1">
+        <h3>Titulo</h3>
+        <p>Parrafo</p>
+        Este es el primer div
       </div>
-   
-      <script src="vue.js"></script>
-    </body>
+      <div v-else-if='parrafo == 2'>Este es el segundo div</div>
+      <div v-else-if='parrafo == 3'>Este es el tercer div</div>
+      <div v-else>Este es el cuarto div, salió de condicion</div>
+    </div>
+
+    <script src="vue.js"></script>
+  </body>
 </html>
