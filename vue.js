@@ -1,11 +1,15 @@
 new Vue({
   el: "#eventos",
   data:{
-    contador:0
+    x:0,
+    y:0
   },
   methods:{
-   alerta:function(msg){
-     alert(msg)
+   showCoord:function(evento){
+    this.x=evento.clientX;
+    this.y= evento.clientY;
+
+   }
    }
   }
-});
+);

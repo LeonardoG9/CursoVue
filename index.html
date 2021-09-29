@@ -9,8 +9,9 @@
   </head>
   <body>
     <div id="eventos">
-      <button v-on:click="alerta('Este es el mensaje')">Mostrar alerta</button>
-
+      <div v-on:mousemove="showCoord" style="height: 300px; width: 500px; border: 1px solid red;">
+      x: {{x}} y: {{y}}
+      </div>
     </div>
     <script src="vue.js"></script>
   </body>
