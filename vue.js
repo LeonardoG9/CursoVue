@@ -11,8 +11,8 @@ new Vue({
     this.y= evento.clientY;
 
    },
-   sumar: function(cantidad){
-    this.contador+=cantidad
+   sumar: function(){
+    this.contador+=1
    }
    }
   }

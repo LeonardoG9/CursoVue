@@ -9,10 +9,13 @@
   </head>
   <body>
     <div id="eventos">
-      <div v-on:mousemove="showCoord" v-on:click="sumar(5)"style="height: 300px; width: 500px; border: 1px solid red;">
+      <div @mousemove="showCoord" v-on:click.once="sumar(5)"style="height: 300px; width: 500px; border: 1px solid red;">
+      <div @mousemove.stop  style="height:100px;width:500px;border:1px solid blue"></div>
       </div>
+      <input @click.ctrl="sumar"type="text">
       x: {{x}} y: {{y}}
-      {{contador}}
+      <br>
+      Keys pressed: {{contador}} times
     </div>
     <script src="vue.js"></script>
   </body>
