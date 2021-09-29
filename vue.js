@@ -4,11 +4,8 @@ new Vue({
     contador:0
   },
   methods:{
-    sumarUno:function(){
-      this.contador+=1
-    },
-    restarUno:function(){
-      this.contador-=1
-    }
+   alerta:function(msg){
+     alert(msg)
+   }
   }
 });
