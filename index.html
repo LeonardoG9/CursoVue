@@ -11,7 +11,11 @@
     <div id="vue">
       
       <ul>
-        <li v-for='(pais,index) of paises'>{{index+1}}-{{pais.nombre}}</li>
+        <template v-for='pais of paises'>
+
+          <li >{{pais.nombre}}</li>
+          <hr>
+        </template>
       </ul>
     </div>
 
