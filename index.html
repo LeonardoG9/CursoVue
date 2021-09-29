@@ -9,16 +9,10 @@
   </head>
   <body>
     <div id="vue">
-      
       <ul>
-        <template v-for='pais of paises'>
-
-          <li >{{pais.nombre}}</li>
-          <hr>
-        </template>
+        <li v-for="valor in empleado">{{valor}}</li>
       </ul>
     </div>
-
     <script src="vue.js"></script>
   </body>
 </html>
