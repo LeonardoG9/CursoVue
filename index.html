@@ -9,9 +9,10 @@
   </head>
   <body>
     <div id="eventos">
-      <div v-on:mousemove="showCoord" style="height: 300px; width: 500px; border: 1px solid red;">
-      x: {{x}} y: {{y}}
+      <div v-on:mousemove="showCoord" v-on:click="sumar(5)"style="height: 300px; width: 500px; border: 1px solid red;">
       </div>
+      x: {{x}} y: {{y}}
+      {{contador}}
     </div>
     <script src="vue.js"></script>
   </body>
