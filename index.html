@@ -8,10 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   </head>
   <body>
-    <div id="vue">
-      <ul>
-        <li v-for="valor in empleado">{{valor}}</li>
-      </ul>
+    <div id="eventos">
+      <button v-on:mouseEnter="sumarUno">Sumar uno</button>
+      <button v-on:click="restarUno">Restar uno</button>
+      <hr>
+      {{contador}}
     </div>
     <script src="vue.js"></script>
   </body>

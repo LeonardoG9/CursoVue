@@ -1,14 +1,14 @@
 new Vue({
-  el: "#vue",
-  data: {
-  empleado:{
-    nombre:'Leonardo Guzman',
-    edad:'30 años',
-    nacionalidad:'Mexicana',
-    profesion:'Programador',
-    empresa:'IBM',
-    telefono:'4494956128'
-
-  }
+  el: "#eventos",
+  data:{
+    contador:0
   },
+  methods:{
+    sumarUno:function(){
+      this.contador+=1
+    },
+    restarUno:function(){
+      this.contador-=1
+    }
+  }
 });
