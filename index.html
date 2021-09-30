@@ -8,16 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   </head>
   <body>
-    <div id="vue">
-     
-        <template v-if="mostrar">
-          <h3>Titulo</h3>
-          <p>Parrafo</p>
-          Este es el primer div</template>
-        <div v-else>Este es el segundo div</div>
-        edwef
+    <div id="eventos">
+      <div @mousemove="showCoord" v-on:click.once="sumar(5)"style="height: 300px; width: 500px; border: 1px solid red;">
+      <div @mousemove.stop  style="height:100px;width:500px;border:1px solid blue"></div>
       </div>
-   
-      <script src="vue.js"></script>
-    </body>
+      <input @click.ctrl="sumar"type="text">
+      x: {{x}} y: {{y}}
+      <br>
+      Keys pressed: {{contador}} times
+    </div>
+    <script src="vue.js"></script>
+  </body>
 </html>
