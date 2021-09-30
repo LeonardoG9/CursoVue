@@ -7,7 +7,7 @@
           @click="tarea.done = !tarea.done"
           class="btn btn-xs btn-success glyphicon glyphicon-ok"
           type="button"
-        ></button>
+        ></button> 
         <button
           @click="deleteTask(index)"
           class="btn btn-xs btn-danger glyphicon glyphicon-remove"
@@ -19,11 +19,13 @@
 </template>
 
 <script>
+import {bus} from './main'
 export default {
   props: ['tareas'],
   methods: {
     deleteTask(index) {
       this.tareas.splice(index, 1);
+      bus.actualizarContador(this.tareas.length )
     },
   },
 };

@@ -1,25 +1,33 @@
 <template>
-    <h2>{{tituloMayus()}}</h2>
+  <div>
+    <h2>{{ tituloMayus() }}</h2>
+    <h3>Tareas a hacer: {{ numTasks }}</h3>
+  </div>
 </template>
 <script>
+import { bus } from "./main.js";
 export default {
-    props:{
-        titulo:{
-            required:true,
-            type:String,
-            default:'Tareas tareas'
-        }
+  props: ["titulo"],
+  data() {
+    return {
+      numTasks: 0
+    };
+  },
+  methods: {
+    tituloMayus() {
+      return this.titulo.toUpperCase();
     },
-    methods:{
-        tituloMayus(){
-            return this.titulo.toUpperCase();
-        }
-    }
-    
-    // data(){
-    //     return {
-    //         titulo:'Task list xd'
-    //     }
-    // }
-}
+  },
+  created() {
+    bus.$on("actualizarContador", (numTareas) => {
+      this.numTasks = numTareas;
+    });
+  },
+
+  // data(){
+  //     return {
+  //         titulo:'Task list xd'
+  //     }
+  // }
+};
 </script>

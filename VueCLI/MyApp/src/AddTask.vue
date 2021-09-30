@@ -15,8 +15,9 @@
 </template>
 
 <script>
+import { bus } from "./main";
 export default {
-  props: ["tareas"],
+  props: ["tareas", "actualizarCount"],
   data() {
     return {
       newTask: "",
@@ -27,10 +28,13 @@ export default {
       const task = this.newTask.trim();
       if (task) {
         this.tareas.push({ task: task, done: false });
-        this.$emit('increment',1)
+        bus.actualizarContador(this.tareas.length);
       }
       this.newTask = "";
     },
+  },
+  created() {
+    bus.actualizarContador(this.tareas.length);
   },
 };
 </script>
