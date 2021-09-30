@@ -25,41 +25,10 @@
   </head>
   <body class="container">
     <div id="app" class="bg-light p-5 rounded-lg m-3">
-      <h3>{{Titulo}}</h3>
-      <div class="input-group mb-3">
-        <input @keypress.enter="addTask()" class="form-control" placeholder="Add task" v-model="newTask" />
-        <span class="input-group-btn">
-          <button
-            class="btn btn-xs btn-primary"
-            @click="addTask()"
-            type="button"
-          >
-            Add
-          </button>
-        </span>
-      </div>
+      <titulo></titulo>
+      <nueva-tarea></nueva-tarea>
 
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          v-bind:class="{done: task .done}"
-          v-for="(task,index) of tareas"
-        >
-          {{task.task}}
-          <span class="float-end">
-            <button
-              @click="task.done=!task.done"
-              class="btn btn-xs btn-success glyphicon glyphicon-ok"
-              type="button"
-            ></button>
-            <button
-              @click="deleteTask(index)"
-              class="btn btn-xs btn-danger glyphicon glyphicon-remove"
-              type="button"
-            ></button>
-          </span>
-        </li>
-      </ul>
+      <lista-tareas></lista-tareas>
     </div>
   </body>
   <script src="AplicacionToDo.js"></script>
