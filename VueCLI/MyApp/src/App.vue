@@ -4,11 +4,8 @@
       <titulo :titulo="Titulo" :numTasks="numTasks"></titulo>
 
       <add-task :tareas="tareas" :actualizarCount="actualizarCount"></add-task>
-      <task-list v-if="tareas.length>0" :tareas="tareas"></task-list>
-      <p v-else>
-        No tienes tareas pendientes!
-        ahora!
-      </p>
+      <task-list v-if="tareas.length > 0" :tareas="tareas"></task-list>
+      <p v-else>No tienes tareas pendientes! ahora!</p>
     </div>
   </div>
 </template>
@@ -35,6 +32,10 @@ export default {
         },
         {
           task: "Aprender Laravel",
+          done: false,
+        },
+        {
+          task: "Aprender Mongo",
           done: false,
         },
         {
