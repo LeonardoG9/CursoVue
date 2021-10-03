@@ -7,6 +7,7 @@
       <task-list v-if="tareas.length>0" :tareas="tareas"></task-list>
       <p v-else>
         No tienes tareas pendientes!
+        ahora!
       </p>
     </div>
   </div>
