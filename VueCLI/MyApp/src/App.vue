@@ -1,55 +1,38 @@
 <template>
-  <div id="app" class="container">
-    <div class="bg-light p-5 rounded-lg m-3">
-      <titulo :titulo="Titulo" :numTasks="numTasks"></titulo>
-
-      <add-task :tareas="tareas" :actualizarCount="actualizarCount"></add-task>
-      <task-list v-if="tareas.length>0" :tareas="tareas"></task-list>
-      <p v-else>
-        No tienes tareas pendientes!
-      </p>
-    </div>
+  <div class="container">
+    
+    <span>
+      {{msg | suspensivos | mayus}}  
+    </span>
+    <hr>
+    <span>{{msg}}</span>
+    <hr>
+    <span>Temperatura en grados celsius: {{temp}}</span>
+    <br>
+    <span>Temperatura en grados fahrenheit: {{temp | tempToFar}}</span>
   </div>
 </template>
 
 <script>
-import Titulo from "./Titulo.vue";
-import AddTask from "./AddTask.vue";
-import TaskList from "./TaskList.vue";
-import { bus } from "./main";
 export default {
-  components: {
-    Titulo,
-    AddTask,
-    TaskList,
+  data(){
+    return{
+      msg:'ola k tal',
+      temp:30
+    }
   },
-  data() {
-    return {
-      Titulo: "Lista de tareas",
-      numTasks: 3,
-      tareas: [
-        {
-          task: "Aprender Vue.JS",
-          done: false,
-        },
-        {
-          task: "Aprender Laravel",
-          done: false,
-        },
-        {
-          task: "Aprender Mongo",
-          done: false,
-        },
-      ],
-    };
-  },
-  methods: {
-    actualizarCount() {
-      this.numTasks++;
+  filters:{
+    mayus(msg){
+      return msg.toUpperCase();
     },
-  },
-};
+    tempToFar(temp){
+      return (temp*(9/5))+32
+    }
+  }
+
+}
 </script>
 
 <style>
+
 </style>
