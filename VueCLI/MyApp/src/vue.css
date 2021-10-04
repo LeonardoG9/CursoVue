@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: rgba(228, 228, 228, 0.933);
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputs{
+    box-sizing: border-box;
+    width: 30%;
+    background: white;
+    padding: 10px;
+    height: auto;
+}
+
+.resultados{
+    background: white;
+    border: 1px solid rgba(243, 243, 243, 0.933);
+    box-sizing: border-box;
+    height: auto;
+    padding: 5px;
+    width: 30%;
+}
+.msg{
+    white-space: pre;
+}
